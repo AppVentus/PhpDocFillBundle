@@ -1012,18 +1012,19 @@ function isUtf8($string) {
  * Highlights PHP code, with line numbers and anchors
  */
 function highlight_php($string) {
-    $Line = explode("\n",$string);
-    for($i=1;$i<=count($Line);$i++)
+    $line = "";
+    for($i=1;$i<=count(explode("\n",$string));$i++) {
         $line .= "&nbsp;<a name='line$i'>".$i."</a>&nbsp;<br>";
+    }
 
-    $Code = highlight_string($string,true);
+    $code = highlight_string($string,true);
     $header='
         <table border="0" cellpadding="0" cellspacing="0" width="95%" style="">
             <tr>
                 <td width="3%" valign="top" style="background-color: #F2F2F2;"><code>'.$line.'</code></td>
                 <td width="97%" valign="top" style="background-color: white;"><div style="white-space: nowrap; overflow: auto;"><code>';
 
-    $footer = $Code.'</div></code></td>
+    $footer = $code.'</div></code></td>
         </tr>
     </table>';
     return $header.$footer;
@@ -1207,7 +1208,7 @@ if (method_exists('DocBlock',$action))
         <button id="btgen">Generate manual</button>
 
         <span style="font-weight: normal; margin-left: 10px;">
-            <input type="checkbox" onClick="LoadFile();" name="showsource" id="showsource" class="inline" /><label class="inline" for="showsource">Display source</label>
+            <input type="checkbox" checked="checked" onClick="LoadFile();" name="showsource" id="showsource" class="inline" /><label class="inline" for="showsource">Display source</label>
             <span style='color: #888;'>&nbsp;&nbsp;|||&nbsp;&nbsp;</span>
             Elements to document [<a href='http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_elements.pkg.html' target=_blank>?</a>]:
             <input type="checkbox" onClick="LoadFile(); ScanFiles(currentScanMode);" name="page" id="docpage" class="inline" checked /><label class="inline" for="docpage">Files</label>
