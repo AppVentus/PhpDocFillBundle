@@ -23,6 +23,14 @@ Then declare the routing.yml in your application:
         resource: "@AvPhpDocFillBundle/Resources/config/routing.yml"
         prefix:   /
 
+
+Then add the php templating engine support in your framework configuration :
+
+    framework:
+        templating:
+            engines: ['twig', 'php']
+        ...
+
 You now have a new action available in the symfony2 debug bar.
 
 Enjoy !
