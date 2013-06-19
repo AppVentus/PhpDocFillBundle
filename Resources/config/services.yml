@@ -1,0 +1,5 @@
+services:
+    av_php_doc_fill.documentor:
+        class: "AppVentus\\PhpDocFillBundle\\Documentor\\PHPDocFillDataCollector"
+        tags:
+            - { name: "data_collector", template: "AvPhpDocFillBundle:Documentor:phpDocFill", id: "documentor"}

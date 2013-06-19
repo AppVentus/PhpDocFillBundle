@@ -1,0 +1,19 @@
+{
+    "name": "appventus/php-doc-fill-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle helping you to fill your php docs",
+    "keywords": ["doc", "php", "documentation", "PhpDocFill"],
+    "homepage": "http://appventus.com",
+    "license": "MIT",
+    "authors": [
+        {"name": "Paul Andrieux", "email": "paul@appventus.com"}
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": { "AppVentus\\PhpDocFillBundle": "" }
+    },
+    "target-dir": "AppVentus/PhpDocFillBundle",
+    "minimum-stability": "dev"
+}

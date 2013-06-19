@@ -1,0 +1,5 @@
+av_php_doc_fill_documentor:
+    pattern:  /PHPDocFill.php
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AvPhpDocFillBundle:Documentor:PHPDocFill.html.php'
