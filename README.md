@@ -6,6 +6,9 @@ The PhpDocFillBundle help you to write your documentation for all your symfony2 
 
 ## Install
 
+Get the source with composer :
+
+    require "appventus/php-doc-fill-bundle": "dev-master"
 
 Declare the bundle in your AppKernel.php:
 
